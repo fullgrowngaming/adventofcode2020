@@ -5,7 +5,6 @@
 Notes:
 -"Binary Search" might not be the best name for that function, but I feel it gets the meaning
 of what it does across.
--Sorting the list in this part is not necessary, but I will clean that up at a later point.
 """
 
 def read_input(filename: str) -> list:
@@ -42,12 +41,18 @@ if __name__ == "__main__":
     data = read_input('input.txt')
 
     seat_ids = [find_seat_id(seat) for seat in data]
-    seat_ids.sort()
-    max_seat_id = seat_ids[-1]
-    missing_seat = 0
 
-    for idx, seat in enumerate(seat_ids):
-        if seat - seat_ids[idx - 1] != 1:
-            missing_seat = seat - 1
+    max_seat_id = 0
+    min_seat_id = 9999
+    total = 0
 
-    print(f'Max Seat ID: {max_seat_id} | Your Seat: {missing_seat}')
+    for seat_id in seat_ids:
+        total += seat_id
+        if seat_id < min_seat_id:
+            min_seat_id = seat_id
+        elif seat_id > max_seat_id:
+            max_seat_id = seat_id
+
+    answer = sum(range(min_seat_id, max_seat_id + 1)) - total
+
+    print(f'Max Seat ID: {max_seat_id} | Your Seat: {answer}')
