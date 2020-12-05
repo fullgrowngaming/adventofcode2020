@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""dec05-1.py: Solution to Advent of Code December 5th, part 1
+"""dec05-1.py: Solution to Advent of Code December 5th, part 2
 
 Notes:
 -"Binary Search" might not be the best name for that function, but I feel it gets the meaning
