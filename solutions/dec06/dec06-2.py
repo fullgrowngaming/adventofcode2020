@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 
-"""dec06-1.py: Solution to Advent of Code December 6th, part 1
+"""dec06-2.py: Solution to Advent of Code December 6th, part 2
 """
-
-import string
 
 def read_input(filename: str) -> list:
     data = list()
