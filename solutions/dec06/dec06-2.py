@@ -29,7 +29,7 @@ def main():
     shared = 0
     for elem in data:
         shared += len(set.intersection(*elem))
-        print(set.intersection(*elem), shared)
+
     print(shared)
 
 if __name__ == "__main__":

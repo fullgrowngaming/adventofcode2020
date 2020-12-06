@@ -29,7 +29,7 @@ def main():
     shared = 0
     for elem in data:
         union = set.union(*elem)
-        for char in string.ascii_lowercase:
+        for char in set(string.ascii_lowercase):
             if char in union:
                 shared += 1
 
