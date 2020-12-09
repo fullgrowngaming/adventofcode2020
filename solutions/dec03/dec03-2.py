@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""dec03-1.py: Solution to Advent of Code December 3rd, part 1
+"""dec03-1.py: Solution to Advent of Code December 3rd, part 2
 """
 
 def read_input(filename: str) -> list:
